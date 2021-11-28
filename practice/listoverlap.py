@@ -17,3 +17,18 @@ for item in a:
         finall.append(item)
 
 print(finall)
+
+
+#with this you can just create new list but with duplicates
+result = [i for i in a if i in b]
+print(result)
+
+#To eradicate duplicates we can use set()
+results = [i for i in set(a) if i in b]
+print(results)
+
+#or you can use .count function
+result_overlaps = [i for i in a if i in b]
+print(result_overlaps)
+results = [i for i in result_overlaps if result_overlaps.count(i) == 1]
+print(results)
